@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Banco de Frases para Vendas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Iso&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #e0f7ff, #0a1e3f);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .bubble-title {
+      font-family: 'Rubik Iso', cursive;
+      font-size: 3em;
+      text-align: center;
+      margin-top: 40px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .bubble-title::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 350px;
+      height: 120px;
+      background: radial-gradient(circle at center, #00c6ff, #0072ff);
+      opacity: 0.25;
+      border-radius: 50%;
+      z-index: -1;
+      filter: blur(25px);
+    }
+
+    .category-button {
+      display: block;
+      width: 80%;
+      margin: 20px auto;
+      padding: 15px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      cursor: pointer;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .category-button:hover {
+      transform: scale(1.05);
+    }
+
+    .animated-ball {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      animation: floatBall 20s linear infinite alternate;
+      z-index: 0;
+    }
+
+    @keyframes floatBall {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      100% {
+        transform: translateY(-500px) translateX(200px);
+      }
+    }
+
+    .premium-section {
+      text-align: center;
+      margin-top: 60px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .premium-section h2 {
+      font-size: 2em;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .premium-section p {
+      color: #fff;
+      font-size: 1.1em;
+      margin: 10px auto;
+      max-width: 700px;
+    }
+
+    .premium-button {
+      padding: 15px 30px;
+      border-radius: 10px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      border: none;
+      font-size: 1em;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .footer-share {
+      text-align: center;
+      margin: 40px auto;
+    }
+
+    .footer-share button {
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .feedback-area {
+      text-align: center;
+      margin-top: 20px;
+      padding: 20px;
+    }
+
+    .feedback-area textarea {
+      width: 80%;
+      height: 80px;
+      padding: 10px;
+      border-radius: 10px;
+      border: none;
+      resize: none;
+    }
+
+    .feedback-area button {
+      margin-top: 10px;
+      padding: 10px 20px;
+      border-radius: 10px;
+      background: #00c6ff;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1 class="bubble-title">Banco de Frases de Vendas</h1>
+
+  <!-- Botões das Categorias -->
+  <button class="category-button">Atração</button>
+  <button class="category-button">Autoridade</button>
+  <button class="category-button">Urgência</button>
+  <button class="category-button">Conversão</button>
+  <button class="category-button">Prova Social</button>
+  <button class="category-button">Lifestyle</button>
+  <button class="category-button">Educação</button>
+  <button class="category-button">Direto ao Ponto</button>
+  <button class="category-button">Quebra de Objeções</button>
+  <button class="category-button">Recompra</button>
+  <button class="category-button">Indicação</button>
+  <button class="category-button">Seguimento</button>
+  <button class="category-button">Boas-vindas</button>
+  <button class="category-button">Nutrição</button>
+
+  <!-- Seção Premium -->
+  <div class="premium-section">
+    <h2>Assine o Premium</h2>
+    <p>Desbloqueie acesso total a todas as frases otimizadas, atualizações semanais e conteúdo exclusivo. Pare de perder tempo procurando o que dizer. Transforme sua comunicação em vendas reais.</p>
+    <p>Sinta a segurança de ter frases prontas para cada momento da sua estratégia. Chega de travar na hora de postar ou responder um cliente!</p>
+    <button class="premium-button">Quero ser Premium</button>
+  </div>
+
+  <!-- Compartilhar e Feedback -->
+  <div class="footer-share">
+    <button>Compartilhar</button>
+    <button>Copiar Link</button>
+  </div>
+
+  <div class="feedback-area">
+    <textarea placeholder="Deixe seu feedback ou sugestão..."></textarea><br>
+    <button>Enviar</button>
+  </div>
+
+  <!-- Bolinhas animadas -->
+  <div class="animated-ball" style="width: 120px; height: 120px; top: 80%; left: 20%;"></div>
+  <div class="animated-ball" style="width: 80px; height: 80px; top: 60%; left: 60%;"></div>
+  <div class="animated-ball" style="width: 60px; height: 60px; top: 50%; left: 30%;"></div>
+  <div class="animated-ball" style="width: 100px; height: 100px; top: 90%; left: 80%;"></div>
+
+</body>
+</html>
