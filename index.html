@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banco de Frases - Área Premium</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="firebaseConfig.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>Banco de Frases</h1>
+            <p class="promo">De R$ 147,00 por R$ 97,00 - Promoção por tempo limitado!</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Buscar frases..." />
+        </div>
+
+        <div id="categories-container">
+            <!-- As categorias serão inseridas dinamicamente aqui -->
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Banco de Frases - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        const categorias = [
+            "Atração", "Autoridade", "Urgência", "Conversão", "Prova Social",
+            "Lifestyle", "Educação", "Direto ao Ponto", "Quebra de Objeções",
+            "Recompra", "Indicação", "Seguimento", "Boas-vindas", "Nutrição"
+        ];
+
+        const frasesPorCategoria = {
+            "Atração": [
+                "Essa oportunidade não bate à porta duas vezes.",
+                "Você vai querer ouvir isso antes que seja tarde.",
+                "O segredo para chamar atenção está nesta frase.",
+                "Desperte curiosidade com o jeito certo de falar.",
+                "Essa frase abre qualquer conversa com impacto.",
+                // Adicione mais frases para as categorias
+            ],
+            // Adicionar frases de outras categorias conforme necessário
+        };
+
+        const container = document.getElementById('categories-container');
+
+        categorias.forEach(cat => {
+            const isGratuita = cat === "Atração";
+            const div = document.createElement("div");
+            div.className = "category";
+            div.innerHTML = `
+                <div class="category-header" onclick="toggleCategory(this)">
+                    <h3>${cat}</h3>
+                    <div class="arrow">&#9660;</div>
+                </div>
+                <div class="phrases hidden">
+                    ${frasesPorCategoria[cat].slice(0, 5).map(f => `
+                        <div class="phrase">
+                            <p>${f}</p>
+                            <button onclick="copyPhrase(this)">Copiar</button>
+                        </div>
+                    `).join('')}
+                    ${!isGratuita ? `
+                        <div class="premium-block">
+                            <button class="unlock-btn">Desbloquear Premium</button>
+                        </div>
+                    ` : ''}
+                </div>
+            `;
+            container.appendChild(div);
+        });
+
+        function toggleCategory(header) {
+            header.nextElementSibling.classList.toggle('hidden');
+            header.querySelector('.arrow').classList.toggle('rotate');
+        }
+
+        function copyPhrase(btn) {
+            const text = btn.previousElementSibling.innerText;
+            navigator.clipboard.writeText(text);
+            btn.innerText = "Copiado!";
+            setTimeout(() => btn.innerText = "Copiar", 1500);
+        }
+    </script>
+</body>
+
+</html>
