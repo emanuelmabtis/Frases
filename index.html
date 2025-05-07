@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de Frases para Vendas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Banco de Frases para Vendas</h1>
+        <div class="promo">Preço promocional por tempo limitado!</div>
+    </header>
+
+    <div class="container">
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar frases...">
+        </div>
+
+        <div class="category-buttons">
+            <button data-category="atracao">Atração</button>
+            <button data-category="autoridade">Autoridade</button>
+            <button data-category="urgencia">Urgência</button>
+            <button data-category="conversao">Conversão</button>
+            <button data-category="prova-social">Prova Social</button>
+            <button data-category="lifestyle">Lifestyle</button>
+            <!-- Adicione mais categorias conforme necessário -->
+        </div>
+
+        <!-- Categorias e Frases -->
+        <div class="category" data-category="atracao" style="display: none;">
+            <div class="category-header">
+                <h3>Atração</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="phrases">
+                <p>Frase 1 da Atração</p>
+                <p>Frase 2 da Atração</p>
+                <p>Frase 3 da Atração</p>
+                <p>Frase 4 da Atração</p>
+                <p>Frase 5 da Atração</p>
+            </div>
+        </div>
+
+        <!-- Repita para outras categorias -->
+        <div class="category" data-category="autoridade" style="display: none;">
+            <div class="category-header">
+                <h3>Autoridade</h3>
+                <span class="arrow">▼</span>
+            </div>
+            <div class="phrases">
+                <p>Frase 1 da Autoridade</p>
+                <p>Frase 2 da Autoridade</p>
+                <p>Frase 3 da Autoridade</p>
+                <p>Frase 4 da Autoridade</p>
+                <p>Frase 5 da Autoridade</p>
+            </div>
+        </div>
+
+        <!-- Adicionar mais categorias e frases aqui -->
+
+        <div class="premium-block">
+            <button class="unlock-btn">Desbloquear Premium</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Banco de Frases - Todos os direitos reservados</p>
+    </footer>
+
+</body>
+</html>
