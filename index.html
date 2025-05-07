@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banco de Frases Premium</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 30px;
+      position: relative;
+    }
+
+    .titulo {
+      font-size: 3em;
+      font-weight: bold;
+      color: #00aaff;
+      position: relative;
+      z-index: 1;
+      padding: 20px 40px;
+      border-radius: 50px;
+      animation: pulse 3s infinite ease-in-out;
+      border: 3px solid #00aaff;
+      background: rgba(0, 170, 255, 0.1);
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.4);
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 40px rgba(0, 170, 255, 0.8);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.5);
+      }
+    }
+
+    .btn-categoria {
+      display: block;
+      width: 80%;
+      margin: 10px auto;
+      padding: 15px;
+      font-size: 1.1em;
+      text-align: center;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #0077ff, #00ccff);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .btn-categoria:hover {
+      transform: scale(1.05);
+    }
+
+    .descricao-premium {
+      max-width: 800px;
+      margin: 60px auto 30px;
+      padding: 20px;
+      background: rgba(0, 170, 255, 0.1);
+      border-left: 5px solid #00aaff;
+      font-size: 1.2em;
+      color: #aee8ff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 170, 255, 0.3);
+      text-align: center;
+    }
+
+    .assinatura {
+      display: block;
+      margin: 30px auto;
+      padding: 15px 30px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #0044ff, #00cfff);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .assinatura:hover {
+      transform: scale(1.05);
+    }
+
+    .bolinha {
+      position: absolute;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.05);
+      animation: flutuar 10s infinite ease-in-out alternate;
+      z-index: 0;
+    }
+
+    @keyframes flutuar {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      100% {
+        transform: translateY(-80px) translateX(80px);
+      }
+    }
+
+    /* Criar várias bolinhas */
+    .bolinha:nth-child(1) {
+      width: 80px;
+      height: 80px;
+      top: 10%;
+      left: 10%;
+    }
+
+    .bolinha:nth-child(2) {
+      width: 60px;
+      height: 60px;
+      top: 30%;
+      left: 80%;
+    }
+
+    .bolinha:nth-child(3) {
+      width: 100px;
+      height: 100px;
+      top: 70%;
+      left: 20%;
+    }
+
+    .bolinha:nth-child(4) {
+      width: 50px;
+      height: 50px;
+      top: 60%;
+      left: 60%;
+    }
+
+    .bolinha:nth-child(5) {
+      width: 70px;
+      height: 70px;
+      top: 40%;
+      left: 40%;
+    }
+  </style>
+</head>
+<body>
+  <!-- Bolinhas animadas -->
+  <div class="bolinha"></div>
+  <div class="bolinha"></div>
+  <div class="bolinha"></div>
+  <div class="bolinha"></div>
+  <div class="bolinha"></div>
+
+  <header>
+    <div class="titulo">Banco de Frases Premium</div>
+  </header>
+
+  <!-- Botões de categoria -->
+  <button class="btn-categoria">Atração</button>
+  <button class="btn-categoria">Autoridade</button>
+  <button class="btn-categoria">Urgência</button>
+  <button class="btn-categoria">Conversão</button>
+  <button class="btn-categoria">Prova Social</button>
+  <button class="btn-categoria">Lifestyle</button>
+  <button class="btn-categoria">Educação</button>
+  <button class="btn-categoria">Direto ao Ponto</button>
+  <button class="btn-categoria">Quebra de Objeções</button>
+  <button class="btn-categoria">Recompra</button>
+  <button class="btn-categoria">Indicação</button>
+  <button class="btn-categoria">Seguimento</button>
+  <button class="btn-categoria">Boas-vindas</button>
+  <button class="btn-categoria">Nutrição</button>
+
+  <!-- Descrição Premium -->
+  <div class="descricao-premium">
+    Assinando o Premium, você desbloqueia **TODAS** as frases otimizadas para vender nos stories e mensagens!  
+    Ideal para quem quer **ganhar tempo, vender mais e ter um conteúdo pronto todo dia**.  
+    Pare de perder vendas por não saber o que postar.  
+    **Tenha frases de impacto separadas por objetivo**, tudo pronto para copiar e colar!
+  </div>
+
+  <!-- Botão de assinatura -->
+  <button class="assinatura">Assinar Premium</button>
+</body>
+</html>
