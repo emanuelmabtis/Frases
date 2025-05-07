@@ -1,0 +1,166 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f7f7f7; /* Cor de fundo clara */
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  text-align: center;
+  background-color: #FF6F61; /* Cor vibrante suave */
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1.2rem;
+}
+
+/* Navegação */
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+nav ul li a:hover {
+  color: #f7f7f7;
+}
+
+/* Categorias */
+main {
+  display: grid;
+  gap: 20px;
+}
+
+.category {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #FF6F61;
+  margin-bottom: 15px;
+}
+
+.phrase-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.phrase-list li {
+  background-color: #f2f2f2;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.phrase-list li button {
+  background-color: #4CAF50; /* Cor vibrante de botão */
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.phrase-list li button:hover {
+  background-color: #45a049;
+}
+
+.phrase-list li.premium {
+  background-color: #ffcc00; /* Cor para Premium */
+  color: #333;
+  text-align: center;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1rem;
+  color: #777;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Rolagem suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .category {
+    padding: 15px;
+  }
+
+  .phrase-list li {
+    font-size: 0.9rem;
+  }
+
+  .phrase-list li button {
+    font-size: 0.9rem;
+  }
+}
