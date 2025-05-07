@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+header {
+    background-color: #2C3E50;
+    padding: 10px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo {
+    font-size: 1.5rem;
+}
+header .premium-button a {
+    background-color: #F39C12;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.main {
+    padding: 20px;
+}
+#search {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+select {
+    padding: 10px;
+}
+footer {
+    background-color: #2C3E50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.login-container {
+    padding: 20px;
+    background-color: #f4f4f4;
+    width: 300px;
+    margin: 100px auto;
+    border-radius: 10px;
+}
+button {
+    background-color: #F39C12;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #E67E22;
+}
