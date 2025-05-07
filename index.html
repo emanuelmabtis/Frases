@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banco de Frases Vendedoras</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    .animated-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .bubble {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, rgba(0,132,255,0.3), transparent);
+      border-radius: 50%;
+      animation: float 15s infinite ease-in-out alternate;
+      opacity: 0.1;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) translateX(0);
+      }
+      100% {
+        transform: translateY(-100vh) translateX(50vw);
+      }
+    }
+
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      margin-top: 80px;
+      color: #ffffff;
+      text-shadow: 0 0 10px #00b4ff, 0 0 20px #0083b0, 0 0 40px #00b4ff;
+      border: 4px solid;
+      border-image: linear-gradient(to right, #00b4ff, #0083b0);
+      border-image-slice: 1;
+      padding: 20px;
+      border-radius: 20px;
+      display: inline-block;
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.1), 0 0 40px rgba(0, 180, 255, 0.3);
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .button {
+      width: 100%;
+      margin-bottom: 16px;
+      padding: 16px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      background: linear-gradient(to right, #00b4ff, #0083b0);
+      border: none;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0, 180, 255, 0.5);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.5s ease;
+    }
+
+    .button.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .premium-section {
+      margin-top: 80px;
+      padding: 30px;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 180, 255, 0.4);
+    }
+
+    .premium-description {
+      font-size: 1.2rem;
+      color: #00b4ff;
+      text-shadow: 0 0 8px rgba(0, 174, 255, 0.5);
+      margin-bottom: 20px;
+    }
+
+    .premium-btn {
+      background: linear-gradient(to right, #00B4DB, #0083B0);
+      color: white;
+      padding: 16px 30px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 20px rgba(0, 132, 255, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+<div class="animated-background">
+  <div class="bubble" style="top: 90%; left: 10%;"></div>
+  <div class="bubble" style="top: 100%; left: 40%; animation-delay: 2s;"></div>
+  <div class="bubble" style="top: 95%; left: 70%; animation-delay: 4s;"></div>
+  <div class="bubble" style="top: 105%; left: 20%; animation-delay: 6s;"></div>
+  <div class="bubble" style="top: 110%; left: 80%; animation-delay: 8s;"></div>
+</div>
+
+<div class="container">
+  <h1>Banco de Frases Vendedoras</h1>
+
+  <!-- Botões de Categorias -->
+  <button class="button">Atração</button>
+  <button class="button">Autoridade</button>
+  <button class="button">Urgência</button>
+  <button class="button">Conversão</button>
+  <button class="button">Prova Social</button>
+  <button class="button">Lifestyle</button>
+  <button class="button">Educação</button>
+  <button class="button">Direto ao Ponto</button>
+  <button class="button">Quebra de Objeções</button>
+  <button class="button">Recompra</button>
+  <button class="button">Indicação</button>
+  <button class="button">Seguimento</button>
+  <button class="button">Boas-vindas</button>
+  <button class="button">Nutrição</button>
+
+  <!-- Plano Premium -->
+  <div class="premium-section">
+    <p class="premium-description">
+      Libere todas as frases Premium, organize suas estratégias com mais velocidade e pare de perder tempo pensando no que escrever. <br><br>
+      Assinando você também elimina a insegurança na hora de vender, ganha consistência e aumenta o engajamento nos stories e no WhatsApp!
+    </p>
+    <button class="premium-btn">Assinar Premium</button>
+  </div>
+
+  <!-- Compartilhamento e Feedback -->
+  <section style="margin-top: 100px; text-align: center;">
+    <h2 style="font-size: 2rem; margin-bottom: 20px; color: #ffffff; text-shadow: 0 0 8px rgba(0, 174, 255, 0.7);">Compartilhe com amigos</h2>
+    <div style="margin-bottom: 20px;">
+      <a href="https://api.whatsapp.com/send?text=Encontrei um site com frases prontas incríveis para vendas, dá uma olhada: [COLE_AQUI_O_LINK_DO_SITE]" target="_blank" style="background: linear-gradient(to right, #00B4DB, #0083B0); color: white; padding: 12px 24px; border-radius: 12px; margin: 10px; display: inline-block; text-decoration: none; box-shadow: 0 0 12px rgba(0, 132, 255, 0.6); transition: all 0.3s ease;">Compartilhar no WhatsApp</a>
+      <button onclick="copiarLink()" style="background: linear-gradient(to right, #00B4DB, #0083B0); color: white; padding: 12px 24px; border-radius: 12px; margin: 10px; display: inline-block; border: none; box-shadow: 0 0 12px rgba(0, 132, 255, 0.6); transition: all 0.3s ease;">Copiar Link</button>
+    </div>
+
+    <h2 style="font-size: 2rem; margin-top: 60px; margin-bottom: 20px; color: #ffffff; text-shadow: 0 0 8px rgba(0, 174, 255, 0.7);">Nos diga o que achou!</h2>
+    <form style="max-width: 600px; margin: 0 auto;">
+      <textarea placeholder="Digite seu feedback aqui..." rows="4" style="width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ccc; resize: none;"></textarea>
+      <button type="submit" style="margin-top: 12px; background: linear-gradient(to right, #00B4DB, #0083B0); color: white; padding: 10px 20px; border: none; border-radius: 10px; box-shadow: 0 0 10px rgba(0,132,255,0.5); cursor: pointer;">Enviar Feedback</button>
+    </form>
+  </section>
+</div>
+
+<script>
+  function copiarLink() {
+    const link = window.location.href;
+    navigator.clipboard.writeText(link).then(() => {
+      alert("Link copiado para área de transferência!");
+    });
+  }
+
+  // Animações ao rolar
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  document.querySelectorAll('.button').forEach(btn => observer.observe(btn));
+</script>
+</body>
+</html>
